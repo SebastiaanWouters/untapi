@@ -28,7 +28,7 @@ This will clone the project into a directory named `untapi`.
 
 Navigate to the project directory:
 
-    cd your-repo
+    cd untapi
 
 Install the Go dependencies:
 
@@ -78,7 +78,6 @@ Sample `Caddyfile`:
 
     your-domain.com {
       reverse_proxy localhost:PORT
-      tls your-email@example.com
     }
 
 Replace `your-domain.com` with your actual domain and `your-email@example.com` with your email. Update `PORT` to the port where your application is running.
@@ -87,4 +86,4 @@ To run Caddy, execute:
 
     caddy run
 
-This will start the Caddy server and your application will be available at `https://your-domain.com`.
+This will start the Caddy server and your application will be available at `https://your-domain.com`. Make sure to keep the go program running in the background while executing the caddy server (using go run main.go serve & or other background services). 

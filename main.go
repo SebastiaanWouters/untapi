@@ -222,7 +222,7 @@ func main() {
         scheduler := cron.New()
 
         // updates user data from api
-        scheduler.MustAdd("updateUserData", "*/5 * * * *", func() {
+        scheduler.MustAdd("updateUserData", "*/15 * * * *", func() {
 				updateUserData(app)
 		})
 
